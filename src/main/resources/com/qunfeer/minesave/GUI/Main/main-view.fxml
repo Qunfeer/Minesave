@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@main-view.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.qunfeer.minesave.GUI.Main.MainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="文件">
+            <items>
+              <MenuItem fx:id="versionManage" mnemonicParsing="false" onAction="#onVersionManageButtonClick" text="版本管理" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="嘻嘻">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onEasterEggClick" text="点我有惊喜" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAboutClick" text="关于" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <HBox alignment="CENTER_LEFT" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <ChoiceBox fx:id="versions" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="150.0" prefHeight="23.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin>
+            </ChoiceBox>
+            <Region maxHeight="200.0" maxWidth="50.0" HBox.hgrow="ALWAYS" />
+            <ChoiceBox fx:id="saves" maxWidth="1.7976931348623157E308" minHeight="23.0" minWidth="121.0" prefHeight="23.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+       </HBox>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+         <children>
+            <ListView fx:id="choiceGit" maxWidth="310.0" minWidth="250.0" prefHeight="400.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Region prefHeight="400.0" prefWidth="239.0" HBox.hgrow="ALWAYS" />
+            <VBox prefHeight="400.0" prefWidth="76.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="commit" disable="true" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#onCommitButtonClick" text="备份" VBox.vgrow="ALWAYS" />
+                  <Region minHeight="30.0" minWidth="0.0" />
+                  <Button fx:id="reset" disable="true" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#onResetButtonClick" text="恢复" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <ProgressBar fx:id="progressBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="20.0" nodeOrientation="LEFT_TO_RIGHT" progress="0.0">
+         <VBox.margin>
+            <Insets bottom="10.0" left="5.0" right="5.0" />
+         </VBox.margin></ProgressBar>
+   </children>
+</VBox>

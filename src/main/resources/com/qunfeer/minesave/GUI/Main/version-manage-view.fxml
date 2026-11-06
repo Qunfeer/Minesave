@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefWidth="460.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.qunfeer.minesave.GUI.Main.VersionManageController">
+   <padding>
+      <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+   </padding>
+   <children>
+      <Label text="已管理的存档文件夹：" />
+      <ListView fx:id="versionList" prefHeight="280.0" VBox.vgrow="ALWAYS" />
+      <Label text="删除仅从列表中移除记录，不会删除磁盘上的文件。" textFill="#808080" wrapText="true" />
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="添加文件夹" />
+            <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="删除选中" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
